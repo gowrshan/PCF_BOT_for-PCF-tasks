@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>BOT</title>
+    <script>
+        var bot = {{ bot }}
+    </script>
+        <style type="text/css">
+.chat-box{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.box{
+    transition: height .6s ease-out;
+    width: 300px;
+    height: 0px;
+    background: grey;
+    z-index: 9999;
+}
+.open .box{
+  height:400px;
+      transition: height .6s ease-out;
+}
+.open {
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #3F51B5;
+    background: #673AB7;
+    color: #eaeaea;
+}
+
+        </style>
+  </head>
+  <body>
+  <div class="chat-box">
+  <div class="open">Click to Chat
+  <div class="box">
+    <br>
+     <form method='post'>
+        Human: <input type='text' name='human'><br>
+        Bot: {{ bot }}<br>
+        <input type="submit" name="action"> 
+
+<script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+<p><a href="JavaScript:newPopup('http://18.236.186.163:5002/');">Hello, Click on to enter environment details!</a></p>
+
+  </div>
+    </div>
+</div>
+<script>
+</script>
+  </body>
+</html>
+
